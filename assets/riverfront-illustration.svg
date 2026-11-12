@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+<title id="title">A cheerful Green Bay neighborhood by the river</title><desc id="desc">Original, stylized illustration of a sunny riverside neighborhood with colorful buildings, trees, a bridge, and water.</desc>
+<defs>
+ <pattern id="checks" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="2"/></pattern>
+ <pattern id="water" width="74" height="45" patternUnits="userSpaceOnUse"><path d="M4 24q16-10 32 0t32 0" fill="none" stroke="#FFFDF6" stroke-width="6" stroke-linecap="round" opacity=".56"/></pattern>
+ <clipPath id="rounded"><rect width="900" height="700" rx="34"/></clipPath>
+</defs>
+<g clip-path="url(#rounded)">
+ <rect width="900" height="700" fill="#B6E5F1"/><rect width="900" height="700" fill="url(#checks)"/>
+ <circle cx="716" cy="134" r="93" fill="#FFDC79"/><circle cx="716" cy="134" r="119" fill="none" stroke="#FFF4BD" stroke-width="9" opacity=".6"/>
+ <path d="M0 373q95-64 210-23t220 0q124-47 235-7t235-21v283H0Z" fill="#C9E9DB"/>
+ <path d="M0 479c120-31 244-20 369-2s266-25 531 5v91H0Z" fill="#83C6B3"/>
+ <path d="M0 497c220-12 360-17 495-4s240 10 405-19v35H0Z" fill="#F9C8AB"/>
+ <!-- distant buildings -->
+ <path d="M22 405v-115h85v115M120 420V265h78v155M225 421V329h74v92M322 423V237h85v186M426 418V289h95v129M535 426V252h84v174M636 423V312h77v111M728 420V270h93v150" fill="#FFF3E3" stroke="#294A57" stroke-width="6" stroke-linejoin="round"/>
+ <rect x="43" y="317" width="20" height="34" rx="3" fill="#AEDFE9"/><rect x="74" y="317" width="20" height="34" rx="3" fill="#AEDFE9"/>
+ <path d="M136 289h18v31h-18zm29 0h18v31h-18zm-29 44h18v31h-18zm29 0h18v31h-18z" fill="#FED78D"/>
+ <path d="M245 349h17v25h-17zm27 0h17v25h-17z" fill="#F7B3A1"/>
+ <path d="M343 263h16v33h-16zm27 0h16v33h-16zm-43 54h17v33h-17zm42 0h17v33h-17zm-42 55h17v33h-17zm42 0h17v33h-17z" fill="#BCE5E6"/>
+ <path d="M444 315h20v30h-20zm32 0h20v30h-20zm-32 45h20v30h-20zm32 0h20v30h-20z" fill="#FFCC73"/>
+ <path d="M548 275h18v28h-18zm31 0h18v28h-18zm-31 46h18v28h-18zm31 0h18v28h-18z" fill="#E6AFA1"/>
+ <path d="M653 342h18v27h-18zm30 0h18v27h-18z" fill="#C4DAF3"/>
+ <path d="M749 294h19v32h-19zm32 0h19v32h-19zm-32 49h19v32h-19zm32 0h19v32h-19z" fill="#F3C281"/>
+ <!-- foreground homes -->
+ <path d="M50 479v-99l93-62 93 62v99Z" fill="#FFAE93" stroke="#294A57" stroke-width="7" stroke-linejoin="round"/>
+ <path d="M31 384l112-81 112 81" fill="none" stroke="#294A57" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="121" y="411" width="44" height="69" rx="4" fill="#FFD46E" stroke="#294A57" stroke-width="5"/><path d="M69 396h31v36H69zM180 396h31v36h-31z" fill="#DDF2ED" stroke="#294A57" stroke-width="4"/>
+ <path d="M550 490V359h177v131Z" fill="#FFF5DA" stroke="#294A57" stroke-width="7"/><path d="M537 366l102-77 102 77" fill="#E58269" stroke="#294A57" stroke-width="9" stroke-linejoin="round"/>
+ <path d="M586 396h33v42h-33zm65 0h33v42h-33z" fill="#A6DDEA" stroke="#294A57" stroke-width="5"/><rect x="615" y="447" width="48" height="43" fill="#F8CA8C" stroke="#294A57" stroke-width="5"/>
+ <path d="M718 490V380l76-50 76 50v110Z" fill="#FFCC7E" stroke="#294A57" stroke-width="7"/><path d="M705 386l89-68 92 68" fill="none" stroke="#294A57" stroke-width="9" stroke-linecap="round"/>
+ <path d="M758 404h24v31h-24zm41 0h24v31h-24z" fill="#B1E1EB" stroke="#294A57" stroke-width="4"/>
+ <!-- foliage -->
+ <path d="M297 492v-118" stroke="#294A57" stroke-width="15" stroke-linecap="round"/><circle cx="299" cy="367" r="62" fill="#79C5A0" stroke="#294A57" stroke-width="7"/><circle cx="261" cy="361" r="34" fill="#98DAB2"/><circle cx="321" cy="329" r="32" fill="#98DAB2"/>
+ <path d="M478 491V380" stroke="#294A57" stroke-width="14" stroke-linecap="round"/><circle cx="477" cy="363" r="53" fill="#9AD9AE" stroke="#294A57" stroke-width="7"/><circle cx="453" cy="341" r="26" fill="#BCE7C1"/>
+ <!-- bridge and water -->
+ <path d="M0 515Q240 479 453 516T900 506v33q-221 31-446 6T0 550Z" fill="#FFE0AD" stroke="#294A57" stroke-width="7"/>
+ <path d="M0 551q230 28 450 12t450 0v137H0Z" fill="#6CB7D0"/><rect x="0" y="551" width="900" height="149" fill="url(#water)"/>
+ <path d="M0 527h900" fill="none" stroke="#294A57" stroke-width="7"/>
+ <path d="M50 518v-27m87 27v-32m88 33v-33m88 30v-31m88 32v-31m88 29v-31m88 31v-31m88 32v-30m88 28v-27m88 26v-27" stroke="#294A57" stroke-width="7"/>
+ <!-- whimsical little details -->
+ <path d="M70 150q17-20 35 0m19-24q15-15 31 0" fill="none" stroke="#416C7A" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="191" cy="208" r="8" fill="#FF8B73"/><circle cx="216" cy="180" r="5" fill="#FF8B73"/>
+ <g transform="translate(63 59)"><rect width="227" height="53" rx="27" fill="#FFF9EC" stroke="#294A57" stroke-width="4"/><text x="24" y="34" font-size="24" font-weight="800" fill="#294A57" font-family="Arial,sans-serif" letter-spacing="2">GREEN BAY  •  09</text></g>
+</g></svg>

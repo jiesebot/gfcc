@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#173d36"/>
-  <path d="M12 17h24v4H16v22h20v4H12z" fill="#f6f2e9"/>
-  <text x="41" y="48" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="#ef8b5e">9</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="19" fill="#FF967E"/><circle cx="47" cy="17" r="10" fill="#FFE19B"/><text x="10" y="43" font-size="28" font-family="Arial,sans-serif" font-weight="800" fill="#263B48">DG</text></svg>

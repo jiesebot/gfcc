@@ -1,75 +1,112 @@
 (() => {
   'use strict';
   const config = window.CAMPAIGN || {};
-  const name = (config.candidateName || 'YOUR NAME').trim();
-  const committee = (config.registeredCommitteeName || '[EXACT REGISTERED COMMITTEE NAME]').trim();
+  const name = String(config.candidateName || 'Devan Giese').trim();
+  const committee = String(config.registeredCommitteeName || '[INSERT EXACT REGISTERED COMMITTEE NAME]').trim();
+  const page = document.body.dataset.currentPage;
 
-  document.querySelectorAll('[data-candidate-name]').forEach((el) => { el.textContent = name; });
-  document.title = `${name} | Green Bay City Council District 9`;
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) metaDescription.content = `Meet ${name}, candidate for Green Bay Common Council District 9. Explore campaign priorities and get in touch.`;
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.content = `${name} | Green Bay District 9`;
+  document.querySelectorAll('[data-candidate-name]').forEach((el) => {el.textContent = name;});
+  document.querySelectorAll('[data-year]').forEach((el) => {el.textContent = String(new Date().getFullYear());});
+  const disclaimer = document.querySelector('#campaign-disclaimer');
+  if (disclaimer) disclaimer.textContent = `Paid for by ${committee}`;
 
-  const disclaimer = document.getElementById('disclaimer');
-  disclaimer.textContent = `Paid for by ${committee}`;
-  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  const nav = document.getElementById('site-navigation');
+  const toggle = document.querySelector('.menu-toggle');
+  if (nav && toggle) {
+    nav.querySelectorAll('a[data-page]').forEach((link) => {
+      if (link.dataset.page === page) link.setAttribute('aria-current', 'page');
+    });
+    const closeMenu = () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      nav.classList.remove('nav-open');
+    };
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      nav.classList.toggle('nav-open', open);
+    });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {if (event.key === 'Escape') closeMenu();});
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+  }
 
-  const story = (config.personalStory || '').trim();
-  if (story) {
-    const el = document.getElementById('personal-story');
-    story.split(/\n\s*\n/).forEach((paragraph) => {
+  const photo = String(config.candidatePhoto || '').trim();
+  if (photo && (/^https:\/\//i.test(photo) || /^assets\/[\w.-]+\.(png|jpg|jpeg|webp|avif)$/i.test(photo))) {
+    ['home-portrait','about-portrait'].forEach((id) => {
+      const img = document.getElementById(id);
+      if (!img) return;
+      img.src = photo;
+      img.alt = `Portrait of ${name}`;
+      img.hidden = false;
+      const placeholder = img.parentElement.querySelector('.portrait-placeholder');
+      if (placeholder) placeholder.hidden = true;
+      img.addEventListener('error', () => {
+        img.hidden = true;
+        if (placeholder) placeholder.hidden = false;
+      });
+    });
+  }
+
+  const bio = String(config.biography || '').trim();
+  const bioContainer = document.querySelector('#candidate-bio');
+  if (bio && bioContainer) {
+    bio.split(/\n\s*\n/).forEach((paragraph) => {
+      if (!paragraph.trim()) return;
       const p = document.createElement('p');
       p.textContent = paragraph.trim();
-      if (p.textContent) el.appendChild(p);
+      bioContainer.appendChild(p);
     });
-    el.hidden = false;
-    document.getElementById('story-reminder').hidden = true;
+    bioContainer.hidden = false;
+    const placeholder = document.querySelector('#bio-placeholder');
+    if (placeholder) placeholder.hidden = true;
   }
-
-  const email = (config.contactEmail || '').trim();
-  if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    const link = document.getElementById('email-link');
-    link.href = `mailto:${email}?subject=${encodeURIComponent('Hello from District 9')}`;
-    link.querySelector('[data-email-address]').textContent = email;
-    link.hidden = false;
-    document.getElementById('contact-pending').hidden = true;
-  }
-
-  [
-    ['volunteerUrl', 'volunteer-link'],
-    ['donateUrl', 'donate-link'],
-    ['socialUrl', 'social-link']
-  ].forEach(([field, id]) => {
-    const url = (config[field] || '').trim();
-    if (url && /^https:\/\//i.test(url)) {
-      const el = document.getElementById(id);
-      el.href = url;
-      el.hidden = false;
-    }
-  });
 
   if (config.endorsementConfirmed === true) {
-    const note = document.querySelector('.endorsement-note');
-    if (note) note.remove();
+    const note = document.querySelector('#endorsement-unverified');
+    if (note) note.hidden = true;
+    const quote = String(config.endorsementQuote || '').trim();
+    const quoteEl = document.querySelector('#endorsement-quote');
+    if (quote && quoteEl) {
+      quoteEl.textContent = `“${quote.replace(/^[“\"]|[”\"]$/g,'')}”`;
+      quoteEl.hidden = false;
+      const attr = document.querySelector('#endorsement-quote-attribution');
+      if (attr) {attr.textContent = 'Amaad Rivera-Wagner · Wisconsin State Representative';attr.hidden = false;}
+    }
   }
 
-  const menu = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('main-nav');
-  const closeMenu = () => {
-    menu.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('aria-label', 'Open navigation');
-    nav.classList.remove('nav-open');
-  };
-  menu.addEventListener('click', () => {
-    const opening = menu.getAttribute('aria-expanded') !== 'true';
-    menu.setAttribute('aria-expanded', String(opening));
-    menu.setAttribute('aria-label', opening ? 'Close navigation' : 'Open navigation');
-    nav.classList.toggle('nav-open', opening);
-  });
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-  document.addEventListener('click', (event) => {
-    if (!nav.contains(event.target) && !menu.contains(event.target)) closeMenu();
+  const email = String(config.contactEmail || '').trim();
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.querySelectorAll('[data-campaign-email]').forEach((a) => {
+      a.href = `mailto:${email}?subject=${encodeURIComponent('Green Bay District 9 campaign inquiry')}`;
+      const text = a.querySelector('[data-email-text]');
+      if (text) text.textContent = email;
+      a.hidden = false;
+    });
+    document.querySelectorAll('[data-email-pending]').forEach((el) => {el.hidden = true;});
+  }
+
+  const urlFields = [
+    ['volunteerUrl','[data-volunteer-link]','[data-volunteer-pending]'],
+    ['socialUrl','[data-social-link]','[data-social-pending]'],
+    ['donationUrl','[data-donation-link]',null]
+  ];
+  urlFields.forEach(([key, selector, pending]) => {
+    const url = String(config[key] || '').trim();
+    if (!/^https:\/\//i.test(url)) return;
+    document.querySelectorAll(selector).forEach((a) => {
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.hidden = false;
+    });
+    if (pending) document.querySelectorAll(pending).forEach((el) => {el.hidden = true;});
+    if (key === 'donationUrl') {
+      const row = document.querySelector('[data-donation-wrap]');
+      if (row) row.hidden = false;
+    }
   });
 })();

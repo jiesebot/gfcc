@@ -1,26 +1,29 @@
 /**
- * EDIT THIS FILE FIRST.
- * Empty links are automatically hidden until you add them.
- * Do not publish until you replace the candidate name, committee name and
- * confirm your endorsement and policy copy.
+ * DEVAN GIESE CAMPAIGN CONFIGURATION
+ * Update the committee, contact details, bio, approved endorsement wording,
+ * and real links before publishing. Empty fields stay hidden.
  */
 window.CAMPAIGN = {
-  candidateName: "YOUR NAME",
-  // This must match the exact committee name filed with your election clerk.
-  registeredCommitteeName: "[EXACT REGISTERED COMMITTEE NAME]",
+  candidateName: "Devan Giese",
+  // Must exactly match the registered committee's official name.
+  registeredCommitteeName: "[INSERT EXACT REGISTERED COMMITTEE NAME]",
 
-  // Use a public campaign email address, not your private address.
+  // Use an email created for campaign communications, never a private inbox.
   contactEmail: "",
 
-  // One to three paragraphs about your Green Bay connection and background.
-  // Separate paragraphs with a blank line (\n\n).
-  personalStory: "",
+  // Optional: add a local image to assets/, then enter its relative path.
+  // Example: "assets/devan-photo.jpg"
+  candidatePhoto: "",
 
-  // These buttons do not appear until a real https:// URL is provided.
+  // Tell your story in your own words. Separate paragraphs using \n\n.
+  biography: "",
+
+  // Use only approved wording and verify permission before publishing.
+  endorsementConfirmed: false,
+  endorsementQuote: "",
+
+  // Buttons and links appear only once valid destinations are supplied.
   volunteerUrl: "",
-  donateUrl: "",
-  socialUrl: "",
-
-  // Only publish endorsement claims after verifying the wording and permission.
-  endorsementConfirmed: false
+  donationUrl: "",
+  socialUrl: ""
 };
