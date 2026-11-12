@@ -7,5 +7,3 @@
 - District 9 official council page: https://www.greenbaywi.gov/641/Ben-DeBaker
 - Wisconsin Ethics Commission, campaign attribution rules: https://ethics.wi.gov/Pages/CampaignFinance/AttributionRequirements.aspx
 - Wisconsin State Assembly District 90: https://www.amaadforgb.com/about
-
-This template is not legal advice. Confirm filing, attribution, contribution, and authorization requirements before publishing campaign material.
