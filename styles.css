@@ -1,16 +1,16 @@
-/* DEVAN GIESE FOR DISTRICT 9 | Friendly civic palette */
+/* GIESE DOES IT. | 2026 campaign branding | GitHub Pages safe relative assets */
 :root {
   --ink: #243A46;
   --ink-muted: #4D6370;
-  --coral: #F48B75;
-  --coral-deep: #CB5B47;
+  --coral: #F68E76;
+  --coral-deep: #B84835;
   --peach: #FFE6D7;
   --peach-light: #FFF5E9;
   --citrus: #FFE49A;
-  --blue: #BDE6F3;
+  --blue: #C9E8F4;
   --blue-deep: #507B90;
   --mint: #D8EEDB;
-  --cream: #FFF9F1;
+  --cream: #FFF7EB;
   --white: #FFFEFC;
   --border: rgba(36,58,70,.16);
   --shadow: 0 18px 48px rgba(61,73,73,.09);
@@ -18,7 +18,7 @@
   --wrap: 1170px;
 }
 *, *::before, *::after {box-sizing:border-box;}
-html {scroll-behavior:smooth;scroll-padding-top:105px;}
+html {scroll-behavior:smooth;scroll-padding-top:105px;overflow-x:clip;}
 body {margin:0;overflow-x:clip;background:var(--cream);color:var(--ink);font-family:"Trebuchet MS", "Segoe UI", Arial, sans-serif;font-size:16px;line-height:1.65;}
 img {max-width:100%;display:block;}
 a {color:inherit;text-decoration:none;}
@@ -33,14 +33,15 @@ button, a {-webkit-tap-highlight-color:transparent;}
 .microbar {background:var(--citrus);border-bottom:1px solid rgba(36,58,70,.09);}
 .micro-inner {display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:33px;font-size:10px;font-weight:900;letter-spacing:.13em;}
 .spark {color:var(--coral-deep);margin-left:4px;font-size:16px;line-height:1;}
-.site-header {background:rgba(255,249,241,.96);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;backdrop-filter:blur(20px);}
+.site-header {background:rgba(255,247,235,.96);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;backdrop-filter:blur(20px);}
 .header-inner {min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:26px;}
 .logo {display:flex;align-items:center;gap:12px;min-width:max-content;}
-.logo-icon {background:var(--coral);height:53px;width:53px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:18px;color:var(--ink);font-weight:1000;letter-spacing:-.08em;font-size:22px;position:relative;box-shadow:4px 4px 0 var(--citrus);}
+.logo-icon {background:var(--coral);height:53px;width:53px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:18px;color:var(--ink);font-weight:1000;letter-spacing:-.08em;font-size:34px;position:relative;box-shadow:4px 4px 0 var(--citrus);}
 .logo-sun {position:absolute;width:13px;height:13px;border-radius:50%;background:var(--citrus);top:-5px;right:-5px;border:2px solid var(--ink);}
 .logo-text {display:flex;flex-direction:column;line-height:1.06;gap:7px;}
-.logo-text strong {font-weight:1000;letter-spacing:-.052em;font-size:22px;}
-.logo-text small {font-weight:900;font-size:9px;letter-spacing:.125em;}
+.logo-text strong {font-weight:1000;letter-spacing:-.062em;font-size:23px;white-space:nowrap;}
+.logo-it {color:#B84835;}
+.logo-text small {font-weight:900;font-size:8.5px;letter-spacing:.10em;}
 .site-nav {display:flex;align-items:center;gap:27px;font-size:13px;font-weight:900;white-space:nowrap;}
 .site-nav a:not(.nav-button) {padding:11px 0;position:relative;}
 .site-nav a:not(.nav-button)::after {content:"";position:absolute;bottom:5px;left:0;right:100%;height:2px;background:var(--coral-deep);transition:right .2s;}
@@ -74,16 +75,16 @@ p {color:var(--ink-muted);}
 .inline-link {display:inline-flex;gap:12px;align-items:center;font-weight:1000;color:#A14937;border-bottom:2px solid currentColor;padding-bottom:4px;line-height:1.25;}
 .inline-link:hover {color:#6C3529;}
 /* Homepage */
-.hero {padding:80px 0 100px;overflow:hidden;background:radial-gradient(circle at 13% 7%, #FFF1D7 0,transparent 45%),var(--cream);}
+.hero {padding:74px 0 107px;overflow:hidden;background:radial-gradient(circle at 13% 7%, #FFEFCF 0,transparent 44%),var(--cream);}
 .hero-grid {display:grid;grid-template-columns:1fr 1.04fr;align-items:center;gap:52px;}
-.hero h1 {margin:23px 0 25px;max-width:670px;}
+.hero h1 {margin:23px 0 18px;max-width:670px;}
 .hero h1 em {color:#D66F54;}
-.hero-lead {font-size:clamp(17px,1.8vw,20px);line-height:1.66;max-width:535px;margin-bottom:32px;}
+.hero-lead {font-size:clamp(16px,1.55vw,18px);line-height:1.66;max-width:535px;margin-bottom:29px;}
 .hero-lead strong {color:var(--ink);}
-.hero-caption {font-size:12px;font-weight:800;margin:25px 0 0;color:#637987;}
+.hero-caption {font-size:12px;font-weight:800;margin:20px 0 0;color:#637987;}
 .hero-visual {position:relative;padding:0 0 16px 12px;transform:rotate(1.5deg);}
 .hero-visual::before {content:"";position:absolute;inset:23px -15px -5px 30px;background:var(--citrus);border:2px solid var(--ink);border-radius:34px;transform:rotate(-3deg);}
-.hero-visual img {width:100%;position:relative;border:2px solid var(--ink);border-radius:34px;box-shadow:0 25px 36px rgba(70,90,88,.12);}
+.hero-visual img {width:100%;height:auto;position:relative;border:2px solid var(--ink);border-radius:34px;box-shadow:0 25px 36px rgba(70,90,88,.12);}
 .visual-sticker {position:absolute;right:-24px;bottom:-18px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:142px;height:142px;background:var(--coral);color:var(--ink);border:2px solid var(--ink);border-radius:50%;font-size:12px;line-height:1.1;font-weight:1000;letter-spacing:.07em;transform:rotate(-11deg);box-shadow:8px 8px 0 var(--cream);}
 .visual-sticker strong {font-size:52px;letter-spacing:-.09em;line-height:.98;}
 .visual-sticker span {font-size:9px;margin-top:5px;}
@@ -116,7 +117,7 @@ p {color:var(--ink-muted);}
 .meet-grid .btn {margin-top:12px;}
 .meet-photo-shell,.portrait-frame {position:relative;width:min(100%,450px);}
 .meet-photo-shell::before,.portrait-frame::before {content:"";position:absolute;inset:25px -20px -20px 20px;border-radius:25px;border:2px solid var(--ink);background:var(--citrus);transform:rotate(-4deg);}
-.meet-photo-shell img,.portrait-frame img {position:relative;border-radius:26px;border:2px solid var(--ink);width:100%;aspect-ratio:640 / 780;object-fit:cover;}
+.meet-photo-shell img,.portrait-frame img {position:relative;height:auto;border-radius:26px;border:2px solid var(--ink);width:100%;aspect-ratio:640 / 780;object-fit:cover;}
 .photo-tag {position:absolute;bottom:23px;right:-26px;background:var(--white);border:2px solid var(--ink);border-radius:15px;padding:12px 16px;font-weight:1000;font-size:10px;letter-spacing:.07em;box-shadow:4px 4px 0 var(--coral);transform:rotate(-4deg);}
 .endorsement-preview {background:#FFF5E7;}
 .endorsement-banner {background:#FFE4A0;border:2px solid var(--ink);border-radius:30px;display:grid;grid-template-columns:110px 1fr 180px;gap:34px;padding:56px;align-items:center;overflow:hidden;}
@@ -246,6 +247,25 @@ p {color:var(--ink-muted);}
 .footer-bottom p {font-size:12px;line-height:1.65;margin:0;color:#D9E4E6;}
 .footer-bottom .attribution {font-family:Arial,sans-serif;background:#FFFDF7;color:var(--ink);padding:12px 17px;border-radius:8px;font-size:14px;line-height:1.4;font-weight:900;max-width:480px;}
 .footer-bottom p:last-child {text-align:right;max-width:460px;}
+/* GIESE DOES IT. Signature system */
+.logo-icon {border-radius:50% 50% 42% 42%;transform:rotate(-7deg);font-family:Georgia,serif;font-style:italic;font-weight:900;}
+.logo-icon .logo-sun {background:#BDE6F3;right:-3px;top:-4px;width:15px;height:15px;}
+.hero-wordmark {font-family:"Arial Black","Trebuchet MS","Segoe UI",sans-serif;font-size:clamp(5.25rem,8vw,8.4rem);line-height:.86;letter-spacing:-.095em;text-transform:none;}
+.hero-wordmark > span {display:block;}
+.hero-wordmark > span:nth-child(2) {white-space:nowrap;}
+.hero-wordmark em {font-family:Georgia,serif;font-size:.92em;font-style:italic;color:#B84835;font-weight:700;letter-spacing:-.105em;position:relative;}
+.hero-wordmark em::after {content:"";display:block;position:absolute;z-index:-1;left:1%;right:-4%;bottom:7%;height:19%;border-radius:80px;background:#FFD99E;transform:rotate(-3deg);}
+.hero-tagline {font-size:clamp(18px,2.25vw,24px);font-weight:900;letter-spacing:-.035em;line-height:1.35;color:var(--ink);margin:0 0 20px;}
+.hero-content .eyebrow {letter-spacing:.115em;}
+.hero-content {position:relative;z-index:1;}
+.art-corner-label {position:absolute;z-index:3;top:-18px;left:1px;background:var(--blue);border:2px solid var(--ink);padding:9px 17px;border-radius:100px;font-weight:1000;font-size:11px;letter-spacing:.12em;transform:rotate(-8deg);box-shadow:4px 4px 0 var(--peach);}
+.art-wordmark {position:absolute;z-index:4;bottom:7px;left:-23px;padding:8px 17px 10px;color:var(--ink);background:#FFF8E9;border:2px solid var(--ink);border-radius:14px;font-size:19px;font-weight:1000;letter-spacing:-.055em;transform:rotate(-5deg);box-shadow:5px 5px 0 var(--coral);}
+.ribbon-inner span:first-child {background:#FFE49A;color:var(--ink);border-radius:100px;padding:7px 15px;font-size:13px;letter-spacing:-.02em;text-transform:none;transform:rotate(-3deg);}
+.subpage-stamp {position:absolute;z-index:5;left:17px;bottom:16px;display:grid;place-items:center;text-align:center;line-height:.91;letter-spacing:-.065em;font-size:13px;font-weight:1000;transform:rotate(-10deg);background:#FFF7EB;width:88px;height:88px;border-radius:50%;border:2px solid var(--ink);box-shadow:3px 4px 0 var(--coral);}
+.footer-logo-mark {border-radius:50%;font-size:27px;transform:rotate(-8deg);font-family:Georgia,serif;font-weight:900;}
+.footer-logo {letter-spacing:-.065em;}
+/* Keep small text consistently readable */
+.footer-logo small,.logo-text small {font-family:"Trebuchet MS","Segoe UI",sans-serif;}
 /* Narrow desktops, tablets, mobile */
 @media (max-width:1050px) {
  .site-nav {gap:17px;font-size:12px;}
@@ -296,12 +316,17 @@ p {color:var(--ink-muted);}
  .micro-inner span:first-child {display:none;}
  .micro-inner {justify-content:center;}
  .logo-text strong {font-size:18px;}
+ .logo-text small {font-size:7px;}
  .logo-text small {font-size:8px;}
- .logo-icon {width:45px;height:45px;border-radius:15px;font-size:20px;}
+ .logo-icon {width:45px;height:45px;border-radius:50% 50% 42% 42%;font-size:28px;}
  .hero {padding-top:48px;}
  h1 {font-size:clamp(3.1rem,12.8vw,4.3rem);}
  h2 {font-size:clamp(2.35rem,9vw,3.2rem);}
- .hero h1 {margin:18px 0 20px;}
+ .hero h1 {margin:22px 0 22px;}
+ .hero-wordmark {font-size:clamp(3.8rem,15.2vw,6.4rem);line-height:.90;}
+ .hero-tagline {font-size:18px;margin-bottom:17px;}
+ .art-wordmark {font-size:15px;left:0;bottom:-5px;}
+ .art-corner-label {font-size:9px;left:5px;top:-15px;}
  .hero-lead {font-size:16px;}
  .btn {min-height:54px;padding:14px 19px;font-size:13px;}
  .hero-visual {padding:0 0 16px 0;}
@@ -344,5 +369,108 @@ p {color:var(--ink-muted);}
  .footer-top {flex-direction:column;gap:30px;}
  .footer-top nav {column-gap:35px;}
  .footer-bottom .attribution {width:100%;font-size:13px;}
+ .subpage-stamp {width:72px;height:72px;font-size:11px;}
 }
 @media (prefers-reduced-motion:reduce) {html{scroll-behavior:auto;} *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;}}
+
+@media (min-width:801px) and (max-width:1120px) {
+ .logo-text strong {font-size:20px;}
+ .logo-text small {font-size:7.8px;}
+ .header-inner {gap:12px;}
+ .site-nav {gap:13px;font-size:12px;}
+ .hero-wordmark {font-size:clamp(5.4rem,8vw,7.4rem);}
+}
+@media (max-width:385px) {
+ .logo-text strong {font-size:16px;}
+ .logo-text small {font-size:6.6px;}
+ .hero-wordmark {font-size:clamp(3.45rem,14.8vw,4.3rem);}
+ .hero-content .eyebrow {font-size:9px;}
+}
+
+/* Local-first update: balanced wordmark, live Green Bay conditions and six-issue grid */
+.logo-it {color:inherit !important;}
+.hero-wordmark {letter-spacing:-.087em;}
+.hero-wordmark > span:nth-child(2) {letter-spacing:-.077em;}
+.hero-wordmark em,.hero-wordmark em::after {font:inherit;color:inherit;background:none;}
+.microbar {background:#D6EBF4;}
+.micro-inner {min-height:43px;gap:20px;letter-spacing:.035em;font-size:12px;line-height:1.35;font-weight:750;}
+.local-place,.local-live,.local-weather {display:flex;align-items:center;gap:7px;}
+.local-place {white-space:nowrap;}
+.local-pin {display:inline-grid;place-items:center;background:#FFF9EF;color:#B84835;border-radius:50%;width:22px;height:22px;font-size:14px;}
+.local-neighborhood {color:#4A6273;font-weight:600;}
+.local-live {gap:14px;justify-content:flex-end;flex-wrap:wrap;}
+.local-weather {white-space:nowrap;}
+#gb-weather-icon {font-size:16px;line-height:1;}
+.local-separator {opacity:.35;}
+.local-time {white-space:nowrap;font-variant-numeric:tabular-nums;}
+.topic-grid {grid-template-columns:repeat(3,minmax(0,1fr));}
+.topic-card {min-height:304px;}
+.topic-card h3 {font-size:clamp(1.35rem,2vw,1.6rem);}
+.legal-reality {background:#FFF3D1;border-left:4px solid #B76D3E;border-radius:0 12px 12px 0;padding:18px 20px;margin:24px 0;font-size:14px;line-height:1.67;}
+.legal-reality strong {color:#263C49;}
+@media (max-width:1050px) {
+ .micro-inner {font-size:11px;}
+ .topic-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:570px) {
+ .micro-inner {display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:53px;font-size:11px;letter-spacing:0;}
+ .micro-inner span:first-child {display:initial;}
+ .local-neighborhood,.local-separator {display:none;}
+ .local-place {flex:0 0 auto;font-size:10px;gap:4px;}
+ .local-pin {width:18px;height:18px;font-size:11px;}
+ .local-live {flex:1 1 auto;gap:1px;align-items:flex-end;flex-direction:column;font-size:10px;}
+ .local-weather {font-size:11px;gap:4px;}
+ #gb-weather-icon {font-size:12px;}
+ .topic-grid {grid-template-columns:1fr;}
+ .hero-wordmark {font-size:clamp(3.65rem,15.0vw,6.4rem);}
+}
+@media (max-width:365px) {.local-place strong{font-size:9px;} .local-live {font-size:9px;} .hero-wordmark{font-size:clamp(3.22rem,14.5vw,3.55rem);}}
+
+.weather-credit {text-decoration:underline;text-underline-offset:3px;}
+.weather-credit:hover {color:#FFFFFF;}
+
+/* Explicit policy platform revision: long tag labels and nine-card overview. */
+.topic-label{line-height:1.4;min-height:2.8em;}
+.issue-section{scroll-margin-top:105px;}
+@media (min-width:1150px){.topic-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+
+
+/* Campaign calendar: public Google Calendar embeds, matching the neighborhood palette */
+.site-nav {gap:21px;}
+.events-preview {background:#D9EEEA;}
+.events-preview-layout {display:grid;grid-template-columns:.76fr 1.1fr;gap:65px;align-items:center;}
+.events-preview-copy h2 {margin:20px 0 22px;}
+.events-preview-copy p {font-size:18px;max-width:450px;line-height:1.75;margin-bottom:28px;}
+.event-local-note {font-size:12px;font-weight:800;color:var(--ink-muted);margin-top:21px;display:flex;gap:10px;align-items:center;}
+.event-local-note span {color:var(--coral-deep);font-size:18px;}
+.calendar-preview-shell,.calendar-main-shell {background:#FFFEFC;border:2px solid var(--ink);border-radius:27px;overflow:hidden;box-shadow:8px 10px 0 rgba(36,58,70,.12);min-width:0;}
+.calendar-preview-top {display:flex;gap:12px;align-items:center;padding:17px 22px;background:#FFE49A;border-bottom:2px solid var(--ink);font-size:11px;letter-spacing:.1em;font-weight:1000;}
+.calendar-dot {display:block;flex:none;background:var(--coral);width:12px;height:12px;border:2px solid var(--ink);border-radius:50%;}
+.calendar-top-stamp {margin-left:auto;font-size:9px;color:#556069;}
+.calendar-preview-inner {padding:13px;min-height:310px;display:flex;flex-direction:column;}
+.calendar-embed {border:0;background:#fff;display:block;width:100%;max-width:100%;}
+.calendar-agenda {height:320px;min-height:320px;}
+.calendar-full {height:700px;min-height:700px;}
+.calendar-empty {background:repeating-linear-gradient(-35deg,#FFFDF8 0,#FFFDF8 21px,#FFF9EB 22px,#FFF9EB 23px);border-radius:19px;min-height:310px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:33px;text-align:center;}
+.calendar-empty-icon {width:60px;height:60px;display:grid;place-items:center;background:var(--blue);border:2px solid var(--ink);border-radius:20px;transform:rotate(-7deg);font-size:31px;margin-bottom:22px;}
+.calendar-empty strong {font-size:22px;line-height:1.25;letter-spacing:-.035em;}
+.calendar-empty p {max-width:340px;font-size:14px;line-height:1.65;margin:13px auto;}
+.calendar-empty-footer {font-size:9px;font-weight:1000;letter-spacing:.10em;color:#7F5F56;margin-top:14px;}
+.events-hero-art {background:var(--citrus);display:flex;flex-direction:column;align-items:center;gap:0;}
+.events-hero-art::before {content:'';position:absolute;width:285px;height:285px;background:#FFAE91;border-radius:50%;right:-78px;top:-91px;}
+.events-hero-month {position:relative;margin-top:21px;z-index:2;font-size:25px;line-height:1;font-weight:1000;letter-spacing:.14em;}
+.events-hero-number {position:relative;z-index:2;font-size:clamp(100px,11vw,154px);font-weight:1000;line-height:1;letter-spacing:-.12em;transform:rotate(-8deg);margin-left:-15px;}
+.events-hero-note {position:relative;z-index:2;font-size:12px;line-height:1.35;text-align:center;letter-spacing:.08em;font-weight:1000;margin-top:4px;}
+.events-main-section {background:#FFF9F1;}
+.calendar-main-toolbar {background:#FFE49A;border-bottom:2px solid var(--ink);padding:18px 22px;display:flex;gap:20px;align-items:center;justify-content:space-between;}
+.calendar-main-brand {display:flex;gap:11px;align-items:center;flex-wrap:wrap;font-size:12px;letter-spacing:.07em;}
+.calendar-main-subtitle {font-weight:400;font-size:12px;letter-spacing:0;color:var(--ink-muted);}
+.calendar-open-link {font-size:12px;white-space:nowrap;}
+.calendar-empty-full {min-height:500px;}
+.calendar-info-row {display:flex;justify-content:space-between;align-items:center;gap:22px;background:#D9EEEA;padding:28px 35px;margin-top:30px;border-radius:20px;}
+.calendar-info-row strong {font-size:20px;letter-spacing:-.025em;}
+.calendar-info-row p {font-size:15px;margin:4px 0 0;max-width:650px;}
+@media(max-width:1080px){.site-nav {gap:14px;font-size:12px;}.events-preview-layout {gap:35px;}}
+@media(max-width:910px){.site-nav {gap:12px;font-size:11px;}.logo-text strong {font-size:21px;}}
+@media(max-width:800px){.site-nav {gap:3px;font-size:15px;}.events-preview-layout {grid-template-columns:1fr;gap:28px;}.events-preview-copy p {max-width:650px;}.calendar-preview-shell {max-width:650px;}}
+@media(max-width:570px){.events-preview-layout {gap:27px;}.calendar-preview-top {padding:14px 13px;gap:8px;font-size:10px;}.calendar-preview-inner {padding:8px;}.calendar-agenda {height:340px;}.calendar-main-toolbar {padding:17px;flex-wrap:wrap;}.calendar-main-subtitle {width:100%;}.calendar-full {height:570px;min-height:570px;}.calendar-empty-full {min-height:360px;}.calendar-info-row {flex-direction:column;align-items:flex-start;padding:25px 22px;}.events-hero-art .events-hero-number {font-size:115px;}.calendar-empty {padding:25px 15px;}.calendar-empty strong {font-size:20px;}}
